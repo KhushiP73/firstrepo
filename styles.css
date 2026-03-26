@@ -1,0 +1,51 @@
+/* Apply gradient background to whole page */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Gradient background */
+    background: linear-gradient(135deg, #667eea, #764ba2, #ff6a88);
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Gradient animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Fancy H1 styling */
+h1 {
+    font-size: 60px;
+    color: white;
+    text-align: center;
+
+    /* Glow effect */
+    text-shadow: 
+        0 0 10px rgba(255,255,255,0.8),
+        0 0 20px rgba(255,255,255,0.6),
+        0 0 30px rgba(255,255,255,0.4);
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    /* Smooth hover effect */
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover animation */
+h1:hover {
+    transform: scale(1.1);
+    text-shadow: 
+        0 0 20px rgba(255,255,255,1),
+        0 0 40px rgba(255,255,255,0.8),
+        0 0 60px rgba(255,255,255,0.6);
+}
